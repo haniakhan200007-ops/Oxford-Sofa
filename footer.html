@@ -1,0 +1,381 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Oxford Sofa Footer</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #FFFFFF;
+        }
+
+        /* MAIN FOOTER */
+
+        .footer {
+            background-color: #844025;
+            color: #FFFFFF;
+            padding: 40px 3% 20px;
+            width: 100%;
+        }
+
+        /* FOOTER COLUMNS */
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1.35fr 1.5fr 1.35fr;
+            gap: 25px;
+            align-items: start;
+        }
+
+        /* LOGO AND DESCRIPTION */
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            min-width: 0;
+        }
+
+        .footer-logo {
+            width: 215px;
+            max-width: 55%;
+            flex-shrink: 0;
+        }
+
+        .footer-logo img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .footer-description {
+            border-left: 1px solid #D6B78A;
+            padding-left: 20px;
+            color: #EEEEEE;
+            font-size: 16px;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        /* COLUMN HEADINGS */
+
+        .footer-column h3 {
+            color: #E8BE78;
+            font-size: 13px;
+            letter-spacing: 1px;
+            margin: 5px 0 22px;
+            font-weight: bold;
+        }
+
+        /* FOOTER LINKS */
+
+        .footer-column a {
+            display: block;
+            color: #EEEEEE;
+            text-decoration: none;
+            font-size: 15px;
+            line-height: 1.5;
+            margin-bottom: 12px;
+            transition: color 0.3s, padding-left 0.3s;
+        }
+
+        .footer-column a::before {
+            content: "›";
+            color: #E8BE78;
+            font-size: 22px;
+            margin-right: 12px;
+            vertical-align: -1px;
+        }
+
+        .footer-column a:hover {
+            color: #E8BE78;
+            padding-left: 4px;
+        }
+
+        /* CONTACT INFORMATION */
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .contact-icon {
+            color: #E8BE78;
+            font-size: 21px;
+            min-width: 25px;
+            line-height: 1.4;
+        }
+
+        .contact-item p {
+            color: #EEEEEE;
+            font-size: 14px;
+            line-height: 1.6;
+            margin: 0;
+            overflow-wrap: anywhere;
+        }
+
+        .contact-item strong {
+            color: #FFFFFF;
+        }
+
+        .contact-item a {
+            color: #E8BE78;
+            text-decoration: none;
+            display: inline;
+            font-size: inherit;
+            margin: 0;
+        }
+
+        .contact-item a::before {
+            content: none;
+        }
+
+        .contact-item a:hover {
+            color: #FFFFFF;
+            padding-left: 0;
+            text-decoration: underline;
+        }
+
+        /* BOTTOM COPYRIGHT */
+
+        .footer-bottom {
+            border-top: 1px solid #D6B78A;
+            margin-top: 30px;
+            padding-top: 18px;
+            text-align: center;
+            color: #EEEEEE;
+            font-size: 13px;
+        }
+
+        /* TABLET */
+
+        @media (max-width: 1100px) {
+            .footer-container {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                gap: 35px 25px;
+            }
+
+            .footer-brand {
+                grid-column: span 3;
+                max-width: 600px;
+            }
+
+            .footer-logo {
+                width: 200px;
+            }
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 650px) {
+            .footer {
+                padding: 30px 6% 18px;
+            }
+
+            .footer-container {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 30px 20px;
+            }
+
+            .footer-brand {
+                grid-column: span 2;
+                gap: 15px;
+            }
+
+            .footer-logo {
+                width: 140px;
+                max-width: 48%;
+            }
+
+            .footer-description {
+                font-size: 13px;
+                padding-left: 12px;
+            }
+
+            .footer-column h3 {
+                font-size: 12px;
+                line-height: 1.5;
+                margin-bottom: 15px;
+            }
+
+            .footer-column a {
+                font-size: 13px;
+                margin-bottom: 10px;
+            }
+
+            .contact-item {
+                gap: 8px;
+                margin-bottom: 15px;
+            }
+
+            .contact-item p {
+                font-size: 12px;
+            }
+
+            .contact-icon {
+                font-size: 17px;
+                min-width: 20px;
+            }
+
+            .footer-bottom {
+                font-size: 11px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .footer-brand {
+                align-items: flex-start;
+            }
+
+            .footer-logo {
+                width: 110px;
+            }
+
+            .footer-description {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <!-- LOGO AND DESCRIPTION -->
+
+            <div class="footer-brand">
+
+                <div class="footer-logo">
+                    <img src="Oxford Sofa Gold Monogram Logo.png"
+                         alt="Oxford Sofa - Comfort Meets Class">
+                </div>
+
+                <p class="footer-description">
+                    Discover premium quality sofas for every space and style.
+                    At Oxford Sofa, we bring comfort, elegance and durability
+                    to your home.
+                </p>
+
+            </div>
+
+            <!-- QUICK LINKS -->
+
+            <div class="footer-column">
+
+                <h3>QUICK LINKS</h3>
+
+                <a href="home.html">Home</a>
+                <a href="#">Callection</a>
+                <a href="#">Brands</a>
+                <a href="#">Compare Sofas</a>
+                <a href="contact us.html">Contact Us</a>
+
+            </div>
+
+            <!-- OUR COLLECTION -->
+
+            <div class="footer-column">
+
+                <h3>OUR COLLECTION</h3>
+
+                <a href="#">All Sofas</a>
+                <a href="#">L-Shaped Sofas</a>
+                <a href="#">Corner Sofas</a>
+                <a href="#">Luxury Sofas</a>
+                <a href="#">2-Seater Sofas</a>
+                <a href="#">3-Seater Sofas</a>
+                <a href="#">Sofa Beds</a>
+                <a href="#">Recliner Sofas</a>
+
+            </div>
+
+            <!-- CUSTOMER INFORMATION -->
+
+            <div class="footer-column">
+
+                <h3>CUSTOMER INFORMATION</h3>
+
+                <a href="faqs.html">FAQs</a>
+                <a href="shipping and deliveries.html">Shipping and Deliveries</a>
+                <a href="return-policy.html">Return Policy</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms and condition.html">Terms and Conditions</a>
+
+            </div>
+
+            <!-- CONTACT US -->
+
+            <div class="footer-column">
+
+                <h3>CONTACT US</h3>
+
+                <div class="contact-item">
+                    <span class="contact-icon">&#128205;</span>
+
+                    <p>
+                        <strong>Our Location</strong><br>
+                        123 Furniture Street,<br>
+                        Lahore, Pakistan
+                    </p>
+                </div>
+
+                <div class="contact-item">
+                    <span class="contact-icon">&#9993;</span>
+
+                    <p>
+                        <strong>Email Address</strong><br>
+                        <a href="mailto:info@oxfordsofa.com">
+                            info@oxfordsofa.com
+                        </a>
+                    </p>
+                </div>
+
+                <div class="contact-item">
+                    <span class="contact-icon">&#9742;</span>
+
+                    <p>
+                        <strong>Phone Number</strong><br>
+                        <a href="tel:+923001234567">
+                            +92 300 1234567
+                        </a>
+                    </p>
+                </div>
+
+                <div class="contact-item">
+                    <span class="contact-icon">&#9719;</span>
+
+                    <p>
+                        <strong>Business Hours</strong><br>
+                        Mon - Sat: 9:00 AM - 6:00 PM
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- COPYRIGHT -->
+
+        <div class="footer-bottom">
+             2026 Oxford Sofa. All rights reserved.
+        </div>
+
+    </footer>
+
+</body>
+</html>
